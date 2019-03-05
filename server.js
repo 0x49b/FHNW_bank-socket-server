@@ -1,11 +1,15 @@
 const net = require('net');
 const util = require('util');
-const helper = require('./helper');
+const helper = require('./helper/helper');
+const loggerHelper = require('./helper/logger');
+const logger = loggerHelper.logger;
+const HOST = 'localhost';
+const PORT = 1337;
+
+/*
 const {createLogger, format, transports} = require('winston');
 const {combine, timestamp, label, printf} = format;
 
-const HOST = '127.0.0.1';
-const PORT = 1337;
 
 const levels = {
     error: 0,
@@ -31,6 +35,8 @@ const logger = createLogger({
         new transports.File({filename: 'combined.log'})
     ]
 });
+*/
+
 
 
 
