@@ -2,43 +2,11 @@ const net = require('net');
 const util = require('util');
 const helper = require('./helper/helper');
 const loggerHelper = require('./helper/logger');
+
 const logger = loggerHelper.logger;
+
 const HOST = 'localhost';
 const PORT = 1337;
-
-/*
-const {createLogger, format, transports} = require('winston');
-const {combine, timestamp, label, printf} = format;
-
-
-const levels = {
-    error: 0,
-    warn: 1,
-    info: 2,
-    verbose: 3,
-    debug: 4,
-    silly: 5
-};
-
-const logformat = printf(({level, message, label, timestamp}) => {
-    return `${timestamp} [${label}] ${level}: ${message}`;
-});
-
-const logger = createLogger({
-    format: combine(
-        label({label: 'bank-server-socket'}),
-        timestamp(),
-        logformat
-    ),
-    transports: [
-        new transports.Console({level: 'debug'}),
-        new transports.File({filename: 'combined.log'})
-    ]
-});
-*/
-
-
-
 
 net.createServer(function (sock) {
 
