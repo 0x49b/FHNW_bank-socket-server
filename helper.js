@@ -1,4 +1,4 @@
-// shortener.js
+// helper.js
 // ===============
 module.exports = {
 
